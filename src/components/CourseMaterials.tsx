@@ -3,9 +3,9 @@ import { PremiumCard } from "./ui/PremiumCard";
 import { SectionHeader } from "./ui/SectionHeader";
 
 const slideDeck = {
-  name: "Dijkstra_MCF_lesson_slides.pptx",
-  url: "/materials/Dijkstra_MCF_audition.pptx",
-  size: "3.3 MB",
+  name: "Dijkstra.pptx",
+  url: "materials/Dijkstra.pptx",
+  size: "4.1 MB",
   type: "PowerPoint"
 };
 
