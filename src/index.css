@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(120deg, rgba(15, 118, 110, 0.10), transparent 32rem),
+    linear-gradient(240deg, rgba(14, 165, 233, 0.12), transparent 30rem),
+    linear-gradient(135deg, #f8fafc 0%, #f9fafb 42%, #ecfeff 100%);
+  color: #0f172a;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(rgba(15, 118, 110, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 118, 110, 0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black, transparent 82%);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-white/75 bg-white/80 shadow-[0_22px_70px_rgba(15,23,42,0.10)] backdrop-blur-2xl;
+  }
+
+  .glow-card {
+    @apply border border-slate-200/75 bg-white/90 shadow-[0_18px_52px_rgba(15,23,42,0.08)] backdrop-blur-2xl transition duration-300;
+  }
+
+  .glow-card:hover {
+    @apply -translate-y-1 border-indigo-200 shadow-[0_24px_70px_rgba(79,70,229,0.16)];
+  }
+
+  .control-button {
+    @apply rounded-xl border border-slate-200 bg-white/90 px-4 py-2.5 text-sm font-bold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-indigo-200 hover:bg-white hover:text-slate-950 disabled:pointer-events-none disabled:opacity-45;
+  }
+
+  .control-button-primary {
+    @apply border-teal-700 bg-teal-700 text-white shadow-[0_16px_36px_rgba(15,118,110,0.26)] hover:border-teal-800 hover:bg-teal-800 hover:text-white;
+  }
+
+  .neon-title {
+    @apply bg-gradient-to-r from-teal-800 via-cyan-700 to-violet-600 bg-clip-text text-transparent;
+  }
+
+  .cyber-badge {
+    @apply rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-teal-800;
+  }
+
+  .dark-input {
+    @apply border border-slate-200 bg-white/90 text-slate-800 outline-none placeholder:text-slate-400 focus:border-indigo-300 focus:ring-4 focus:ring-indigo-100;
+  }
+}
