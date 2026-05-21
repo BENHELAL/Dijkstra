@@ -74,7 +74,7 @@ export function SidePanel({
 }: SidePanelProps) {
   const activeEdge = scenario.edges.find((edge) => edge.id === step.activeEdgeId);
   const visitedText = step.visited.length > 0 ? step.visited.join(", ") : "None";
-  const progress = Math.round(((stepIndex + 1) / totalSteps) * 100);
+  const progress = Math.round((stepIndex / Math.max(totalSteps - 1, 1)) * 100);
   const activeStage = pipelineStage(step);
 
   return (

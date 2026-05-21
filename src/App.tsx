@@ -74,7 +74,7 @@ export default function App() {
   };
 
   const renderPlanner = () => {
-    const progress = Math.round(((stepIndex + 1) / steps.length) * 100);
+    const progress = Math.round((stepIndex / Math.max(steps.length - 1, 1)) * 100);
     const finalStep = steps[steps.length - 1];
     const previewRoute =
       finalStep?.finalPathNodes.length > 0

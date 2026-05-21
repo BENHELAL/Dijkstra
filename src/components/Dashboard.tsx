@@ -101,7 +101,7 @@ export function Dashboard({
   onNavigate
 }: DashboardProps) {
   const [bestScore, setBestScore] = useState<string | null>(null);
-  const progress = Math.round(((stepIndex + 1) / totalSteps) * 100);
+  const progress = Math.round((stepIndex / Math.max(totalSteps - 1, 1)) * 100);
   const previewApplications = useMemo(() => applications.slice(0, 3), []);
 
   useEffect(() => {
