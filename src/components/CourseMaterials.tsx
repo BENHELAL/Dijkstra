@@ -31,15 +31,7 @@ export function CourseMaterials() {
             and come back to the graph when you are ready to practice.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
-            <a
-              className="control-button control-button-primary"
-              href={slideDeck.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open slides
-            </a>
-            <a className="control-button" href={slideDeck.url} download={slideDeck.name}>
+            <a className="control-button control-button-primary" href={slideDeck.url} download={slideDeck.name}>
               Download
             </a>
           </div>
